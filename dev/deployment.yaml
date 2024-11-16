@@ -14,6 +14,6 @@ spec:
     spec:
       containers:
       - name: myapp-2
-        image: image-registry.openshift-image-registry.svc:5000/devops/poc-devops:latest
+        image: docker.io/nanajanashia/argocd-app:1.1
         ports:
         - containerPort: 8080
