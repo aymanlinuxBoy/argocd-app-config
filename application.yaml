@@ -12,7 +12,7 @@ spec:
     path: dev
   destination: 
     server: https://api.itz-kycw1o.osv.techzone.ibm.com:6443
-    namespace: myapp
+    namespace: myapp-2
 
   syncPolicy:
     syncOptions:
