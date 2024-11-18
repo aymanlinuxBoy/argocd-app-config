@@ -14,6 +14,6 @@ spec:
     spec:
       containers:
       - name: myapp-2
-        image: docker.io/nanajanashia/argocd-app:1.1
+        image: default-route-openshift-image-registry.apps.stgocp.mwanitest.local/devops/poc-devops
         ports:
         - containerPort: 8080
