@@ -6,7 +6,7 @@ spec:
   selector:
     matchLabels:
       app: myapp-2
-  replicas: 6
+  replicas: 3
   template:
     metadata:
       labels:
@@ -14,6 +14,6 @@ spec:
     spec:
       containers:
       - name: myapp-2
-        image: image-registry.openshift-image-registry.svc:5000/devops/poc-devops
+        image: default-route-openshift-image-registry.apps.stgocp.mwanitest.local/devops/poc-devops
         ports:
         - containerPort: 8080
