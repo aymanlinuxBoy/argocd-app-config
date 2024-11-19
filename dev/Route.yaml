@@ -1,0 +1,14 @@
+apiVersion: route.openshift.io/v1
+kind: Route
+metadata:
+  name: cargo-service-route
+  namespace: devops
+spec:
+  to:
+    kind: Service
+    name: cargo-service
+  port:
+    targetPort: 8080
+  tls:
+    termination: edge
+  wildcardPolicy: None
