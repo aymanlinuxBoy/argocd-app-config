@@ -1,19 +1,19 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: myapp
+  name: cargo
   namespace: devops
 spec:
   replicas: 3
   selector:
     matchLabels:
-      app: myapp
+      app: cargo
   template:
     metadata:
       labels:
-        app: myapp
+        app: cargo
     spec:
       containers:
-        - name: myapp
+        - name: cargo
           image: image-registry.openshift-image-registry.svc:5000/devops/cargo-service:latest
           imagePullPolicy: Always
