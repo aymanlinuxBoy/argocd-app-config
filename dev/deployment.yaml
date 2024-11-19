@@ -1,10 +1,10 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: cargo
+  name: cargo-poc
   namespace: devops
 spec:
-  replicas: 6
+  replicas: 3
   selector:
     matchLabels:
       app: cargo
