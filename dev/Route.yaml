@@ -1,14 +1,16 @@
-apiVersion: route.openshift.io/v1
 kind: Route
+apiVersion: route.openshift.io/v1
 metadata:
-  name: cargo-service-route
+  name: frontend
   namespace: devops
 spec:
+  host: frontend-devops.apps.stgocp.mwanitest.local
   to:
     kind: Service
-    name: cargo-service
+    name: node-hello-world
+    weight: 100
   port:
-    targetPort: 8080
+    targetPort: 8080-tcp
   tls:
     termination: edge
   wildcardPolicy: None

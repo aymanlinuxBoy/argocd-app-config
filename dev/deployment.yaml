@@ -1,19 +1,24 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: cargo
-  namespace: devops
+  creationTimestamp: null
+  labels:
+    app: frontend
+  name: frontend
 spec:
-  replicas: 3
+  replicas: 1
   selector:
     matchLabels:
-      app: cargo
+      app: frontend
+  strategy: {}
   template:
     metadata:
+      creationTimestamp: null
       labels:
-        app: cargo
+        app: frontend
     spec:
       containers:
-        - name: cargo
-          image: image-registry.openshift-image-registry.svc:5000/devops/cargo-service:latest
-          imagePullPolicy: Always
+      - image: image-registry.openshift-image-registry.svc:5000/devops/fe:latest
+        name: frontend
+        resources: {}
+status: {}
