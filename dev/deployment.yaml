@@ -10,7 +10,6 @@ spec:
   selector:
     matchLabels:
       app: frontend
-  strategy: {}
   template:
     metadata:
       creationTimestamp: null
@@ -20,7 +19,6 @@ spec:
       containers:
       - image: image-registry.openshift-image-registry.svc:5000/devops/fe:latest
         name: frontend
-        resources: {}
         securityContext:
-          runAsUser: 0
-status: {}
+          runAsUser: 1000
+          runAsGroup: 1000
