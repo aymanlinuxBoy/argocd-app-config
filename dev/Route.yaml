@@ -7,7 +7,7 @@ spec:
   host: frontend-devops.apps.stgocp.mwanitest.local
   to:
     kind: Service
-    name: node-hello-world
+    name: frontend
     weight: 100
   port:
     targetPort: 8080-tcp
