@@ -2,7 +2,7 @@ apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
   name: myapp-argo-application-poc
-  namespace: devops
+  namespace: myapp
 spec:
   project: default
 
@@ -12,7 +12,7 @@ spec:
     path: dev
   destination: 
     #server: https://api.itz-kycw1o.osv.techzone.ibm.com:6443
-    server: https://api.stgocp.mwanitest.local:6443
+    server: https://kubernetes.default.svc
     namespace: myapp-2
 
   syncPolicy:
