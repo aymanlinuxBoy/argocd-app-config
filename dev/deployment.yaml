@@ -1,24 +1,19 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  creationTimestamp: null
-  labels:
-    app: frontend
-  name: frontend
+  name: myapp
 spec:
-  replicas: 3
   selector:
     matchLabels:
-      app: frontend
+      app: myapp
+  replicas: 2
   template:
     metadata:
-      creationTimestamp: null
       labels:
-        app: frontend
+        app: myapp
     spec:
       containers:
-      - image: image-registry.openshift-image-registry.svc:5000/devops/fe:latest
-        name: frontend
-        securityContext:
-          runAsUser: 1000680000
-          runAsGroup: 1000680000
+      - name: myapp
+        image: nanajanashia/argocd-app:1.2
+        ports:
+        - containerPort: 8080
